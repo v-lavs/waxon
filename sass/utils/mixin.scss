@@ -1,0 +1,17 @@
+@mixin respond-to($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    transition:  $transition;
+}
+
+@mixin appearance ($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+}

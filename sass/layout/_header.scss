@@ -1,0 +1,94 @@
+.site-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: transparent;
+    padding: 40px 0;
+    z-index: 2000;
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+    .logo-wrap {
+        max-width: 150px;
+        @include respond-to($sm) {
+            max-width: 181px;
+            height: 56px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .logo-link {
+        display: block;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .search-bar {
+        transform: translateY(-100%);
+        transition: .5s;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: $black;
+        padding: 10px;
+        color: $white;
+        opacity: 0;
+        overflow: hidden;
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .form-control,
+        .input-group-addon {
+            border: none;
+            background: transparent;
+            color: $white;
+        }
+        .input-group {
+            display: flex;
+        }
+        .input-group > * {
+            flex-shrink: 0;
+        }
+        .form-control {
+            width: 75%;
+        }
+        .btn-close {
+            font-size: 40px;
+            font-weight: 700;
+            padding: 0 15px 0;
+        }
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $primary;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $primary;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: $primary;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: $primary;
+        }
+    }
+}

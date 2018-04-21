@@ -1,0 +1,33 @@
+
+.text-xs {
+    font-size: 14px;
+}
+
+.text-sm {
+    font-size: 18px;
+}
+
+.text-md {
+    font-family: $secondary-font;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text-lg {
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    @include respond-to($sm) {
+        font-size: 36px;
+    }
+}
+.banner-title {
+    font-family: $secondary-font;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+    @include respond-to($sm) {
+        font-size: 52px;
+    }
+}

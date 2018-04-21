@@ -1,0 +1,65 @@
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    @include respond-to($lg) {
+        display: block;
+    }
+    .menu-item {
+        text-align: left;
+        border-bottom: 1px solid $white;
+        &:last-child {
+            border: none;
+        }
+        @include respond-to($lg) {
+            display: inline-block;
+            text-align: right;
+            border: none;
+        }
+        a {
+            display: block;
+            color: $white;
+            text-decoration: none;
+            padding: 18px 13px;
+            text-transform: uppercase;
+            transition: .35s;
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+}
+
+.main-nav-wrap {
+    @media all and (max-width: 1170px) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 320px;
+        width: 100%;
+        z-index: 9999;
+        background: $black;
+        margin: 0;
+        padding: 40px 25px 25px 45px;
+        text-align: right;
+        transform: translateX(100%);
+        transition: .8s ease;
+        &.open {
+            transform: translateX(0);
+            .menu {
+                display: block;
+            }
+        }
+    }
+}
+.close-main-nav {
+    background:transparent;
+    border: none;
+    font-weight: 700;
+    color: $white;
+    outline: none;
+    @include respond-to($lg) {
+        display: none;
+    }
+}
