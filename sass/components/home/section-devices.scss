@@ -1,0 +1,45 @@
+.section-devices {
+    padding: 79px 0 0 0;
+    .wrap-img-section {
+        width: 40%;
+        max-width: 470px;
+        padding-left: 47px;
+        float: left;
+    }
+    .content-text {
+        width: 60%;
+        float: right;
+        padding: 0 15px;
+    }
+    .text-section {
+        margin: 0 0 30px;
+    }
+    .property-list {
+        @extend %style-item-list;
+    }
+    .property-item {
+        position: relative;
+        padding-left: 100px;
+        line-height: 2;
+        &:before {
+            content: '>';
+            color: #fff;
+            font-size: 21px;
+            font-weight: 400;
+            text-align: center;
+            display: inline-block;
+            line-height: 1;
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background-color: $gold;
+            top: 5px;
+            left: 53px;
+        }
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+}

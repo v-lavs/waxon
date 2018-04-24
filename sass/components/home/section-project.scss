@@ -1,0 +1,53 @@
+.section-project {
+    padding: 80px 0;
+    text-align: center;
+    .nav-list {
+        @extend %style-item-list;
+        margin: 0 -15px 40px;
+    }
+    .nav-item {
+        display: inline-block;
+        margin-right: 6px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .project-list {
+        @extend %style-item-list;
+        margin: 0 -15px 40px;
+    }
+    .card-project {
+        background: $light-grey;
+    }
+    .img-wrap {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+    .img-project {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .content-card {
+        position: relative;
+        text-align: left;
+        padding: 24px 28px 23px;
+        &:before {
+            position: absolute;
+            content: "";
+            top: -33px;
+            left: 12px;
+            border: 23px solid transparent;
+            border-bottom: 18px solid $light-grey;
+        }
+    }
+    .title-card-project {
+        color: $gold;
+        margin: 0;
+    }
+    .category-name {
+        margin: 0;
+    }
+    .overlay {
+    }
+}

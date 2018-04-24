@@ -1,0 +1,20 @@
+.section-themes {
+    background: linear-gradient(to right, #211b19, #4e3427);
+    .container {
+        padding: 45px 0;
+        .title-section-theme {
+            color: $white;
+            margin: 0;
+            span {
+                color: $gold;
+            }
+        }
+        .sub-title-section {
+            margin: 0 0 5px;
+            color: $grey-shoco;
+        }
+    }
+    .wrap-btn {
+        text-align: right;
+    }
+}

@@ -1,0 +1,48 @@
+.section-banner {
+    position: relative;
+    .banner-slide {
+        display: table;
+        position: relative;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        padding: 70px 0;
+        &:after {
+            position: absolute;
+            content: "";
+            background: rgba(17, 17, 17, 0.7);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 1;
+            opacity: 0.6;
+        }
+        .inner-wrap {
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0 auto;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: $white;
+            z-index: 2;
+        }
+        .banner-title {
+            margin: 0 0 5px;
+        }
+        .banner-subtitle {
+            margin-bottom: 7px;
+        }
+        .banner-text {
+            width: 100%;
+            max-width: 562px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+    }
+}

@@ -6,10 +6,12 @@
     font-family: $secondary-font;
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 1.64;
+    line-height: 1;
     padding: 21px 39px 21px 37px;
+    border-radius: 3px;
     &-main {
-        border-radius: 3px;
+        min-width: 170px;
+        text-align: center;
         background-color: $dark-gold;
         box-shadow: inset 0px -3px 0 0 #736357;
         transition: .35s;
@@ -25,34 +27,17 @@
     &-cloce {
         padding: 0 15px;
     }
-}
-
-//--------slider------
-.owl-theme .owl-dots {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    .owl-dot span {
-        background: rgba(255, 255, 255, 0.5);
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
-        margin: 5px 5px;
-        &:hover,
-        &:focus {
-            background: transparent;
-            width: 15px;
-            height: 15px;
-            margin: 3px 3px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
+    &-project {
+        color: $primary;
+        line-height: 1.5;
+        font-weight: 300;
+        text-transform: none;
+        padding: 7px 21px 5px;
+        border: solid 1px #ebebeb;
+        &:hover {
+            color: $white;
+            background: $dark-gold;
         }
     }
-    .owl-dot.active span {
-        background: transparent;
-        width: 15px;
-        height: 15px;
-        margin: 3px 3px;
-        border: 2px solid rgba(255, 255, 255, 0.5);
-    }
 }
+

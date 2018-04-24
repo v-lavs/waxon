@@ -1,47 +1,25 @@
-.section-banner {
-    position: relative;
-    .banner-slide {
-        position: relative;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        padding: 40px 0;
-        &:after {
-            position: absolute;
-            content: "";
-            background: rgba(17, 17, 17, 0.7);
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            z-index: 1;
-            opacity: 0.6;
-        }
-        .container {
-            position: relative;
-            text-align: center;
-            color: $white;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-        .banner-title {
-            margin: 0 0 19px;
-        }
-        .banner-subtitle {
-            margin-bottom: 14px;
-        }
-        .banner-text {
-            width: 100%;
-            max-width: 562px;
-            margin: 0 auto 52px;
-            line-height: 1.5;
-        }
-    }
+@import '../components/home/section-banner';
+@import '../components/home/section-services';
+@import '../components/home/section-realization';
+@import '../components/home/section-themes';
+@import '../components/home/section-project';
+@import '../components/home/section-presentation';
+@import '../components/home/section-devices';
+@import '../components/home/section-counters';
+
+%style-item-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.section-services {
-    color: $primary;
+.title-section {
+    color: $secondary;
+    margin: 0 auto 7px;
 }
+
+.sub-title-section {
+    width: 100%;
+    max-width: 757px;
+    margin: 0 auto 35px;
+}
+

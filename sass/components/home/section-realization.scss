@@ -1,0 +1,14 @@
+.section-realization {
+    padding-top: 83px;
+    background-color: $light-grey;
+    text-align: center;
+    .container-img {
+        width: 100%;
+        max-width: 1230px;
+        overflow: hidden;
+    }
+    .img-browsers {
+        width: 100%;
+        display: block;
+    }
+}

@@ -4,8 +4,11 @@
     right: 0;
     top: 0;
     background: transparent;
-    padding: 40px 0;
+    padding: 25px 0;
     z-index: 2000;
+    @include respond-to($sm) {
+        padding: 40px 0;
+    }
     .container {
         display: flex;
         flex-wrap: nowrap;
@@ -36,7 +39,43 @@
             height: auto;
         }
     }
+    .right-bar {
+        a {
+            color: $white;
+            text-decoration: none;
+            -webkit-transition: .35s;
+            -moz-transition: .35s;
+            -ms-transition: .35s;
+            -o-transition: .35s;
+            transition: .35s;
+            &:hover {
+                color: $gold;
+                outline: none;
+            }
+        }
+        .fa {
+            display: inline-block;
+            font: normal normal normal 20px/1 FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        .icon {
+            font-size: 20px;
+        }
+    }
+    .burger-btn {
+        display: inline-block;
+        background: transparent;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        outline: none;
+        margin-left: 10px;
+        @include respond-to($lg) {
+            display: none;
+        }
 
+    }
     .search-bar {
         transform: translateY(-100%);
         transition: .5s;
@@ -46,7 +85,7 @@
         top: 0;
         width: 100%;
         background: $black;
-        padding: 10px;
+        padding: 25px;
         color: $white;
         opacity: 0;
         overflow: hidden;
@@ -65,16 +104,19 @@
             color: $white;
         }
         .input-group {
+            width: 100%;
             display: flex;
+            justify-content: center
         }
         .input-group > * {
             flex-shrink: 0;
         }
         .form-control {
             width: 75%;
+            padding: 15px;
         }
         .btn-close {
-            font-size: 40px;
+            font-size: 20px;
             font-weight: 700;
             padding: 0 15px 0;
         }

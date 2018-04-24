@@ -7,6 +7,12 @@ jQuery(document).ready(function (){
     nav.addClass('open');
   });
 
+  jQuery('.close-main-nav').click(function (e) {
+
+    e.preventDefault()
+    nav.removeClass('open');
+  });
+
 //  search-bar
   var searchBar = jQuery('.search-bar');
 
@@ -29,7 +35,28 @@ jQuery(document).ready(function (){
     navContainer: false,
     autoHeight: true,
     nav: true,
-    // navText : ["",""]
+    // navText: ["<img src='img/prew.png'>","<img src='img/next.png'>"]
+    navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
   });
+
+  jQuery('.recent-post-slider').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    navText : ["",""],
+    nav:true,
+    responsive:{
+      0:{
+        items:1,
+      },
+      768:{
+        items:2,
+             },
+      970:{
+        items:3,
+        loop:true
+      }
+    }
+  })
 
 });
