@@ -1,7 +1,13 @@
 .section-realization {
-    padding-top: 83px;
+    padding-top: 50px;
     background-color: $light-grey;
     text-align: center;
+    @include respond-to($sm){
+        padding-top: 55px;
+    }
+    @include respond-to($md){
+        padding-top: 64px;
+    }
     .container-img {
         width: 100%;
         max-width: 1230px;

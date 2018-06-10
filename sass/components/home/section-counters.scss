@@ -1,8 +1,55 @@
 .section-counters {
-    padding: 69px 0;
+    padding: 69px 0 29px;
     background: linear-gradient(to right, #211b19, #4e3427);
+    @include respond-to($lg) {
+        padding-bottom: 61px;
+    }
     .counter-list {
-        @extend %style-item-list;
-
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        width: 90%;
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+    .counter-item {
+        position: relative;
+        display: inline-block;
+        width: 16%;
+        min-width: 140px;
+        text-align: center;
+        margin: 0 16px 40px;
+        padding: 0 0 23px;
+        @include respond-to($lg) {
+            max-width: 170px;
+            margin-bottom: 0;
+        }
+       &:after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            height: 2px;
+            width: 30px;
+            background: $gold;
+            @include transform(translateX(-50%));
+        }
+        span {
+            display: block;
+            margin-bottom: 13px;
+            color: $white;
+        }
+    }
+    .wrap-icon-counter {
+        width: 100%;
+        margin-bottom: 10px;
+        @include respond-to($lg) {
+            margin-bottom: 21px;
+        }
+    }
+    .title-counter {
+        text-transform: uppercase;
+        color: $gold;
+        font-weight: 300;
+        margin: 0;
     }
 }

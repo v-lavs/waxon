@@ -6,6 +6,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: $white;
+    overflow: hidden;
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
     &:after {
         position: absolute;
         content: "";
@@ -13,14 +25,18 @@
         right: 0;
         top: 0;
         bottom: 0;
-        background: rgba(17, 17, 17, 0.5);
-        z-index: 1;
+        background: rgba(17, 17, 17, 0.3);
+        z-index: 2;
     }
     .container {
         position: relative;
         text-align: center;
         color: $white;
         top: 50%;
+        webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
         transform: translateY(-50%);
         z-index: 3;
     }
@@ -39,16 +55,23 @@
         height: 100px;
         border-radius: 50%;
         border: none;
-        background-color: #000000;
-        opacity: .2;
-        margin: 0 auto 30px;
+        color: $white;
+        margin: 0 auto 21px;
         transition: .35s;
+        outline: none;
+        background-color: rgba(0, 0, 0, .2);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
         &:hover {
-            background: $choco;
+            background-color: rgba(78, 52, 39, .2);
+            cursor: pointer;
+        }
+        &.play {
+            background-image:url(../img/round.png);
+        }
+        &.pause {
+            background-image:url(../img/pause-circular-button.svg);
         }
     }
- .round {
-     display: block;
-     max-width: 70px;
- }
 }

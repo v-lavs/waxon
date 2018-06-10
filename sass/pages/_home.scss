@@ -6,11 +6,9 @@
 @import '../components/home/section-presentation';
 @import '../components/home/section-devices';
 @import '../components/home/section-counters';
+@import '../components/home/section-posts';
+@import '../components/home/section-partners';
 
-%style-item-list {
-    list-style-type: none;
-    padding: 0;
-}
 
 .title-section {
     color: $secondary;

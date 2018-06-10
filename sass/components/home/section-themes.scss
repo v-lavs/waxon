@@ -1,20 +1,41 @@
 .section-themes {
     background: linear-gradient(to right, #211b19, #4e3427);
-    .container {
-        padding: 45px 0;
-        .title-section-theme {
-            color: $white;
-            margin: 0;
-            span {
-                color: $gold;
-            }
+    padding: 43px 0;
+    text-align: center;
+    @include respond-to($sm) {
+        text-align: left;
+    }
+    .title-section-theme {
+        color: $white;
+        margin: 20px;
+        @include respond-to($sm){
+            margin: 0 0 4px;
         }
-        .sub-title-section {
-            margin: 0 0 5px;
-            color: $grey-shoco;
+        span {
+            color: $gold;
+        }
+    }
+    .sub-title-section {
+        margin: 0 0 25px;
+        color: $grey-shoco;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.0035em;
+        @include respond-to($sm){
+            margin-bottom: 3px;
+        }
+        @include respond-to($md){
+            margin: 5px 0 0;
         }
     }
     .wrap-btn {
-        text-align: right;
+        text-align: center;
+        @include respond-to($sm){
+            text-align: right;
+        }
+        .btn-main {
+            padding: 18px 17px 20px 15px;
+            margin-top: 5px;
+        }
     }
 }

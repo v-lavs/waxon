@@ -6,6 +6,7 @@
     background: transparent;
     padding: 25px 0;
     z-index: 2000;
+    transition: .7s;
     @include respond-to($sm) {
         padding: 40px 0;
     }

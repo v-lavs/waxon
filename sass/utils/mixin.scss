@@ -15,3 +15,10 @@
     -moz-appearance: $value;
     appearance: $value;
 }
+
+@mixin  transform ($translate) {
+    -moz-transform: $translate;
+    -ms-transform:$translate;
+    -webkit-transform: ($translate);
+    -o-transform: ($translate);
+}

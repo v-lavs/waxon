@@ -1,4 +1,4 @@
-.owl-theme {
+.banner-slider.owl-theme {
     .owl-nav {
         width: 100%;
         position: absolute;
@@ -6,7 +6,7 @@
         transform: translateY(50%);
         margin-top: 0;
         display: none;
-        @include respond-to($md){
+        @include respond-to($md) {
             display: flex;
             justify-content: space-between
         }
@@ -62,3 +62,43 @@
         }
     }
 }
+
+.recent-post-slider.owl-theme {
+
+    .owl-nav {
+        margin-top: 17px;
+        [class*='owl-'] {
+            font-size: 21px;
+            margin: 4px;
+            padding: 0 2px;
+            background: transparent;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+            height: 21px;
+            width: 21px;
+            color: $gold;
+            border: 1px solid $gold;
+            line-height: 0.5;
+            transition: .35s;
+            &:hover {
+                color: #d1d1d1;
+                border: 1px solid #d1d1d1;
+            }
+            .fa {
+                font-size: 21px;
+                line-height: 0.8;
+                color: $gold;
+                transition: .35s;
+                &:hover {
+                    color: #d1d1d1;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+

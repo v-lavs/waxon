@@ -1,41 +1,70 @@
 .section-devices {
-    padding: 79px 0 0 0;
+    padding: 83px 0 0 0;
+    @include respond-to($sm) {
+        padding-top: 183px;
+    }
+    .inner-wrap {
+        @include respond-to($sm) {
+            position: relative;
+              min-height: 512px;
+        }
+    }
     .wrap-img-section {
-        width: 40%;
-        max-width: 470px;
-        padding-left: 47px;
-        float: left;
+        max-width: 423px;
+        width: 50%;
+        margin: 0 auto;
+        @include respond-to($sm) {
+            position: absolute;
+            bottom: 0;
+            right: 60%;
+            width: 40%;
+            z-index: 4;
+        }
+    }
+    .img-device {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .title-section {
+        margin-bottom: 15px;
     }
     .content-text {
-        width: 60%;
-        float: right;
-        padding: 0 15px;
+        padding: 0 15px 0 32px;
+        width: 100%;
+        text-align: center;
+        @include respond-to($sm) {
+            width: 60%;
+            float: right;
+            text-align: left;
+        }
     }
     .text-section {
         margin: 0 0 30px;
     }
     .property-list {
-        @extend %style-item-list;
+        list-style-type: none;
+        padding: 0;
+        text-align: left;
     }
     .property-item {
         position: relative;
-        padding-left: 100px;
+        padding-left: 98px;
         line-height: 2;
         &:before {
-            content: '>';
+            content: '\203A';
             color: #fff;
-            font-size: 21px;
-            font-weight: 400;
-            text-align: center;
             display: inline-block;
-            line-height: 1;
+            line-height: .6;
+            font-size: 30px;
+            text-align: center;
             position: absolute;
             width: 21px;
             height: 21px;
             border-radius: 50%;
             background-color: $gold;
             top: 5px;
-            left: 53px;
+            left: 49px;
         }
     }
     img {
